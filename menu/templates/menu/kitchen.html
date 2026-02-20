@@ -1,0 +1,17 @@
+<h2>Kitchen Orders</h2>
+<table border="1">
+<tr>
+<th>Table No</th>
+<th>Items</th>
+<th>Time</th>
+<th>Status</th>
+</tr>
+{% for order in orders %}
+<tr>
+<td>{{ order.table_no }}</td>
+<td>{% for i in order.items.all %}{{ i.name }}, {% endfor %}</td>
+<td>{{ order.timestamp }}</td>
+<td>{{ order.status }}</td>
+</tr>
+{% endfor %}
+</table>

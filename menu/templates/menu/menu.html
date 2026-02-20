@@ -1,0 +1,9 @@
+<h2>Menu for Table {{ table_no }}</h2>
+<form method="POST">
+  {% csrf_token %}
+  {% for item in items %}
+    <input type="checkbox" name="items" value="{{ item.id }}">
+    {{ item.name }} - ₹{{ item.price }} <br>
+  {% endfor %}
+  <button type="submit">Place Order</button>
+</form>

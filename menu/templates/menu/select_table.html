@@ -1,0 +1,6 @@
+<h2>Select Your Table</h2>
+<form method="POST">
+  {% csrf_token %}
+  <input type="number" name="table_no" placeholder="Table Number" required>
+  <button type="submit">Show Menu</button>
+</form>
